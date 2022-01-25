@@ -1,0 +1,26 @@
+server:
+  port: 9050
+  servlet:
+    context-path: /poli/v1
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:customerBD;
+    driver-class-name: org.h2.Driver
+    platform: h2
+    username: sa
+    password:
+
+      spring:
+        datasource:
+          driver-class-name: org.postgresql.Driver
+          url: jdbc://postgresql://ec2-34-206-245-175.compute-1.amazonaws.com:5432/d6qsh34m1tkbcc
+          username: rcstdsldyjprix
+          password: c0c8bbbe70e7f1bdc05e13fab0d34fd4668d1fc4be011ab01a4aa9a4343cee38
+          platform: postgres
+        jpa:
+          hibernate:
+            ddl-auto: create-drop
+          generate-ddl: true
